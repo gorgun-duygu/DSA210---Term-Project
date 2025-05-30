@@ -21,7 +21,6 @@ class BookReviewsEDA:
         
     def load_datasets(self):
         """Load both datasets"""
-        #print("Loading datasets...")
         try:
             self.goodreads_df = pd.read_csv(self.goodreads_path)
             print(f"Goodreads dataset: {self.goodreads_df.shape}")
