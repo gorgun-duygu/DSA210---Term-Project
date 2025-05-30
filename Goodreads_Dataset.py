@@ -4,8 +4,8 @@ import re
 import os
 
 # File paths
-file_path = "C:/Users/gorgu/OneDrive/Masaüstü/Spring 2025/DSA 210/Project/dgorgun_DSA210/goodreads_dataset/books.csv"
-output_dir = "C:/Users/gorgu/OneDrive/Masaüstü/Spring 2025/DSA 210/Project/dgorgun_DSA210/goodreads_dataset"
+file_path = "C:/Users/gorgu/OneDrive/Masaüstü/Spring 2025/DSA 210/Project/goodreads_dataset/books.csv"
+output_dir = "C:/Users/gorgu/OneDrive/Masaüstü/Spring 2025/DSA 210/Project/goodreads_dataset"
 
 # Create the output directory if it doesn't exist
 os.makedirs(output_dir, exist_ok=True)

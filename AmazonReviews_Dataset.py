@@ -6,7 +6,7 @@ from datetime import datetime
 
 books_data_path = "C:/Users/gorgu/OneDrive/Masaüstü/Spring 2025/DSA 210/Project/amazon_book_reviews_dataset/books_data.csv"
 books_rating_path = "C:/Users/gorgu/OneDrive/Masaüstü/Spring 2025/DSA 210/Project/amazon_book_reviews_dataset/Books_rating.csv"
-output_dir = "C:/Users/gorgu/OneDrive/Masaüstü/Spring 2025/DSA 210/Project/dgorgun_DSA210/amazon_book_reviews_dataset"
+output_dir = "C:/Users/gorgu/OneDrive/Masaüstü/Spring 2025/DSA 210/Project/amazon_book_reviews_dataset"
 
 # Create a directory for the output if it doesn't exist
 os.makedirs(output_dir, exist_ok=True)
