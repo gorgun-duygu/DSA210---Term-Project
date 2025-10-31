@@ -1,4 +1,3 @@
-# DSA210---Term-Project
 # Anime Popularity
 
 # 1. Motivation
