@@ -1,5 +1,5 @@
 # DSA210---Term-Project
-Data Science Term Project --- What does 'Anime Popularity' based/ depend on?
+# Anime Popularity
 
 # 1. Motivation
 As a computer science student at Sabancı University, I often watch anime online and think what feature of the anime makes it very popular/ highly rated. Through this project, my aim is to explore the trends in anime ratings and determine the key features of the animes which have high impact on the audience and overall popularity.
