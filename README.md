@@ -26,7 +26,7 @@ As a computer science student at Sabancı University, I often watch anime online
   
 -----
 
-# 3. Reserach Questions
+# 3. Research Questions
 - Does the genre of an anime significantly affect its ratings? 
 - How does the release year of an anime affects its ratings?
 - Are animes with the 'Movie' type more popular than those with the 'TV' type?
