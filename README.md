@@ -35,3 +35,19 @@ As a computer science student at Sabancı University, I often watch anime online
 
 # 4. Exploratory Data Analysis & Hypothesis Testing
 - The dataset collected from Kaggle was analyzed through exploratory data analysis techniques. The goal was to explore patterns in the data and answer the research questions.
+## 4.1 Data Cleaning 
+- Before condcuting the anlaysis, the dataset was cleaned:
+  - Missing values in the dataset were identified and removed.
+  - The episodes column type was converted from object to numeric.
+  - The first genre of the animes were taken for simplification and placed under a newly created column named 'main_genre'.
+## 4.2 Exploratory Data Analysis Results 
+### 4.2.1 Distribution of Anime Ratings
+- According to the plot results, there is a normal distrubiton centered around 6.5 - 7.0.
+- Animes rated very low and very high are less in number (rare).
+### 4.2.2 Ratings by Anime Type
+- According to the boxplot results, animes with the type "TV" have the highest median ratings.
+### 4.2.3 Average Rating by Main Genre 
+- According to the plot results with the top 15 genres (Josei, Mystery, Drama, Action, Police, Game, Shounen, Adventure, Military, Harem, Romance, School, Thriller, Comdey, Martial Arts), "Josei" genre animes have the highest average rating, but closely followed by the other genres.
+### 4.2.4 Popularity vs Rating
+- According to the scatter plot results, there is a positive relationship between the number of members (popularity) and the rating of an anime. However, the relationship is not perfectly linear.
+- Computed correlations are: "Pearson = 0.388" and "Spearmann = 0.666".
