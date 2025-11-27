@@ -14,7 +14,6 @@ EDA Findings:
 Pearson correlation - rating vs members: 0.388
 Spearman correlation - rating vs members: 0.666
 
-
 Hypothesis Tests:
 ANOVA - Genre vs Rating: F=90.807, p=0.0000
 t-test - Movie vs TV Popularity: t=-27.729, p=0.0000
