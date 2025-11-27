@@ -30,3 +30,8 @@ As a computer science student at Sabancı University, I often watch anime online
 - How does the release year of an anime affects its ratings?
 - Are animes with the 'Movie' type more popular than those with the 'TV' type?
 - Does the number of episodes affect an anime’s overall rating? (if the type is not 'Movie')
+
+------
+
+# 4. Exploratory Data Analysis & Hypothesis Testing
+- The dataset collected from Kaggle was analyzed through exploratory data analysis techniques. The goal was to explore patterns in the data and answer the research questions.
