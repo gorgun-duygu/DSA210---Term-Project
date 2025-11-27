@@ -69,8 +69,8 @@ plt.close()
 # Popularity vs Rating -> plot
 plt.figure(figsize=(7,5))
 sns.scatterplot(x=np.log1p(df["members"]), y=df["rating"], alpha=0.4)
-plt.title("Popularity (log members) vs Rating")
-plt.xlabel("Log (Members)")
+plt.title("Popularity (Members) vs Rating")
+plt.xlabel("Members")
 plt.ylabel("Rating")
 plt.savefig(os.path.join(outputs_dir, "popularity_vs_rating.png"))
 plt.close()
@@ -91,19 +91,20 @@ with open(os.path.join(reports_dir, "eda_results.txt"), "a") as f:
 results = []
 
 # H1 -> ANOVA test
+# Does the genre of an anime affect its ratings?
 genres = df["main_genre"].value_counts().head(6).index
 samples = [df.loc[df["main_genre"] == g, "rating"] for g in genres]
 f_stat, p_val = stats.f_oneway(*samples)
 results.append(f"ANOVA - Genre vs Rating: F={f_stat:.3f}, p={p_val:.4f}")
 
-# H2: Are Movies more popular than TV? 
+# H2: Are Movie type more popular than the type TV? 
 # H2 -> Welch’s independent t-test
 movies = np.log1p(df.loc[df["type"] == "Movie", "members"].dropna())
 tv = np.log1p(df.loc[df["type"] == "TV", "members"].dropna())
 t_stat, p_val = stats.ttest_ind(movies, tv, equal_var=False)
 results.append(f"t-test - Movie vs TV Popularity: t={t_stat:.3f}, p={p_val:.4f}")
 
-# H3: Does number of episodes affect rating? 
+# H3: Does the number of episodes affect an anime's rating?
 # H3 -> Correlation test
 episodes = df["episodes"].dropna()
 ratings = df.loc[episodes.index, "rating"]
@@ -112,7 +113,7 @@ results.append(f"Correlation - Episodes vs Rating: r={corr:.3f}, p={p_val:.4f}")
 
 # Write the test results
 with open(os.path.join(reports_dir, "eda_results.txt"), "a") as f:
-    f.write("\n\nHypothesis Tests:\n")
+    f.write("\nHypothesis Tests:\n")
     for r in results:
         f.write(r + "\n")
 
