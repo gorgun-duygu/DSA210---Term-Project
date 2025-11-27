@@ -40,7 +40,7 @@ with open(os.path.join(reports_dir, "eda_results.txt"), "w") as f:
     f.write(str(df.describe()))
 
 # EDA
-# Rating Distribution -> plot
+# Rating Distribution -> histogram
 plt.figure(figsize=(7,4))
 sns.histplot(df["rating"], bins=30, kde=True)
 plt.title("Distribution of Anime Ratings")
@@ -49,14 +49,14 @@ plt.ylabel("Count")
 plt.savefig(os.path.join(outputs_dir, "rating_distribution.png"))
 plt.close()
 
-# Rating by Type -> plot
+# Rating by Type -> boxplot
 plt.figure(figsize=(8,5))
 sns.boxplot(x="type", y="rating", data=df)
 plt.title("Ratings by Anime Type")
 plt.savefig(os.path.join(outputs_dir, "ratings_by_type.png"))
 plt.close()
 
-# Average Rating by Genre -> plot
+# Average Rating by Genre -> bar chart
 avg_by_genre = df.groupby("main_genre")["rating"].mean().sort_values(ascending=False).head(15)
 plt.figure(figsize=(10,6))
 sns.barplot(x=avg_by_genre.index, y=avg_by_genre.values)
@@ -66,7 +66,7 @@ plt.ylabel("Average Rating")
 plt.savefig(os.path.join(outputs_dir, "top_genres_avg_rating.png"))
 plt.close()
 
-# Popularity vs Rating -> plot
+# Popularity vs Rating -> scatter plot
 plt.figure(figsize=(7,5))
 sns.scatterplot(x=np.log1p(df["members"]), y=df["rating"], alpha=0.4)
 plt.title("Popularity (Members) vs Rating")
@@ -79,7 +79,7 @@ plt.close()
 pearson_corr = df["rating"].corr(df["members"], method="pearson")
 spearman_corr = df["rating"].corr(df["members"], method="spearman")
 
-# Record EDA findings to a text file
+# Record EDA findings to the text file
 with open(os.path.join(reports_dir, "eda_results.txt"), "a") as f:
     f.write("\n\nEDA Findings:\n")
     f.write(f"Pearson correlation - rating vs members: {pearson_corr:.3f}\n")
@@ -97,8 +97,8 @@ samples = [df.loc[df["main_genre"] == g, "rating"] for g in genres]
 f_stat, p_val = stats.f_oneway(*samples)
 results.append(f"ANOVA - Genre vs Rating: F={f_stat:.3f}, p={p_val:.4f}")
 
-# H2: Are Movie type more popular than the type TV? 
-# H2 -> Welch’s independent t-test
+# H2: Are Movie type animes more popular than the ones with type TV? 
+# H2 -> t-test
 movies = np.log1p(df.loc[df["type"] == "Movie", "members"].dropna())
 tv = np.log1p(df.loc[df["type"] == "TV", "members"].dropna())
 t_stat, p_val = stats.ttest_ind(movies, tv, equal_var=False)
