@@ -1,0 +1,21 @@
+Total rows: 12064
+Columns: ['anime_id', 'name', 'genre', 'type', 'episodes', 'rating', 'members', 'main_genre']
+           anime_id      episodes        rating       members
+count  12064.000000  11876.000000  12064.000000  1.206400e+04
+mean   13704.476044     12.447289      6.473902  1.827952e+04
+std    11260.369521     47.011062      1.026746  5.527578e+04
+min        1.000000      1.000000      1.670000  1.200000e+01
+25%     3409.250000      1.000000      5.880000  2.210000e+02
+50%    10004.000000      2.000000      6.570000  1.539000e+03
+75%    23863.500000     12.000000      7.180000  9.485500e+03
+max    34519.000000   1818.000000     10.000000  1.013917e+06
+
+EDA Findings:
+Pearson correlation - rating vs members: 0.388
+Spearman correlation - rating vs members: 0.666
+
+
+Hypothesis Tests:
+ANOVA - Genre vs Rating: F=90.807, p=0.0000
+t-test - Movie vs TV Popularity: t=-27.729, p=0.0000
+Correlation - Episodes vs Rating: r=0.089, p=0.0000
