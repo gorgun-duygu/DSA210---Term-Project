@@ -54,7 +54,7 @@ As a computer science student at Sabancı University, I often watch anime online
 ## 4.3 Hypothesis Test Results
  #### 4.3.1 H1 : Does the genre of an anime affect its ratings?
  - According to ANOVA test, F=90.807, p=0.0000. It shows that there is a significant difference in ratings between genres.
- #### 4.3.2 H2 : Are "Movie" type more popular than the type "TV"?
+ #### 4.3.2 H2 : Are "Movie" type animes more popular than the ones with type "TV"?
  - According to t-test, t=-27.729, p=0.0000. Value t being negative shows that animes with type "TV" are more popular.
  #### 4.3.3 H3 : Does the number of episodes affect an anime's rating?
  - According to correlation test, r=0.089, p=0.0000. It shows that even though the number of episodes have an affect on the ratings, its not high. In other words, there is a weak positive correlation between the number of episodes and ratings.
