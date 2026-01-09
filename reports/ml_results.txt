@@ -1,0 +1,12 @@
+Machine Learning Results: Anime Rating Prediction
+Target: rating
+Features: episodes, members, type, main_genre
+Dataset size used for ML methods application: 11876 rows
+Method 1: Linear Regression
+RMSE: 0.8909
+R^2 : 0.2266
+
+Method 2: Random Forest Regressor
+RMSE: 0.7057
+R^2 : 0.5147
+
