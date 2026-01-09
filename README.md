@@ -71,7 +71,7 @@ The target variable of the models is "Anime rating".
   - Popularity (number of members)
   - Main genre
 ## 5.2 Applied Methods
-Before the method training, categorical variables were encoded appropriately for the machine learning algorithms process correctly.
+Before the method training, categorical variables were encoded into numerical representations for the machine learning algorithms process correctly.
 Two regression-based machine learning models were implemented and compared:
 - **Linear Regression**  
   - Used as a baseline method to evaluate whether anime ratings can be explained through linear relationships between the features.
@@ -84,8 +84,10 @@ Methodl performance was evaluated according to:
 - The Linear Regression method resulted in a relatively higher RMSE and a lower R² score. This indicates that anime ratings cannot be sufficiently modeled by using only linear assumptions.
 - The Random Forest method resulted in a lower RMSE and a higher R² score compared to Linear Regression. This indicates that non-linear interactions between the features play an important role in predicting anime ratings.
 
-- The performance of the Random Forest method highlights that anime ratings are affected by complex relationships rather than a single dominant factor. As an example, popularity alone does not determine rating; instead, its effect varies depending on genre and type as well.
+- The performance of the Random Forest method highlights that anime ratings are affected by complex relationships rather than a single factor. As an example, popularity alone does not determine rating; instead, its effect varies depending on genre and type as well.
 - The Actual vs. Predicted plot shows that predictions are more accurate for mid-range ratings, while very low or very high ratings are harder to predict. This indicates the presence of additional unobserved factors such as production quality, storytelling, or audience bias that are not captured in the dataset.
+- These results suggest that predicting anime ratings requires modeling complex interactions between features rather than relying on a single factor. This supports the idea that audience ratings for the animes affected by the combined effects of popularity, genre, and format.
+- Overall, the machine learning results complement the research questions by demonstrating that single factors such as genre or popularity are significant, but their combined effects provide a more complete explanation of anime ratings.
 
 ------
 
