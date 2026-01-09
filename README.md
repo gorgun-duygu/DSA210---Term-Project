@@ -58,3 +58,37 @@ As a computer science student at Sabancı University, I often watch anime online
  - According to t-test, t=-27.729, p=0.0000. Value t being negative shows that animes with type "TV" are more popular.
  #### 4.3.3 H3 : Does the number of episodes affect an anime's rating?
  - According to correlation test, r=0.089, p=0.0000. It shows that even though the number of episodes have an affect on the ratings, its not high. In other words, there is a weak positive correlation between the number of episodes and ratings.
+
+------
+
+# 5. Machine Learning Methods 
+In addition to exploratory data analysis and hypothesis testing, machine learning methods were applied to further analyze how multiple features jointly influence anime ratings. 
+## 5.1 Features and Target Variable
+The target variable of the models is:
+- **Anime rating**
+The features were used as inputs consists of:
+- Number of episodes
+- Anime type (TV, Movie, OVA, etc.)
+- Popularity (number of members)
+- Main genre
+## 5.2 Applied Methods
+Before the method training, categorical variables were encoded appropriately for the machine learning algorithms process correctly.
+Two regression-based machine learning models were implemented and compared:
+- **Linear Regression**  
+  - Used as a baseline method to evaluate whether anime ratings can be explained through linear relationships between the features.
+- **Random Forest Regressor**  
+  - Used to capture non-linear relationships abetween the features such as genre, popularity, and episode numbers.
+## 5.3 Method Performance Discussion
+Methodl performance was evaluated according to:
+- **Root Mean Squared Error (RMSE)**  
+- **R² score**
+- The Linear Regression method resulted in a relatively higher RMSE and a lower R² score. This indicates that anime ratings cannot be sufficiently modeled by using only linear assumptions.
+- The Random Forest method resulted in a lower RMSE and a higher R² score compared to Linear Regression. This indicates that non-linear interactions between the features play an important role in predicting anime ratings.
+
+- The performance of the Random Forest method highlights that anime ratings are affected by complex relationships rather than a single dominant factor. As an example, popularity alone does not determine rating; instead, its effect varies depending on genre and type as well.
+- The Actual vs. Predicted plot shows that predictions are more accurate for mid-range ratings, while very low or very high ratings are harder to predict. This indicates the presence of additional unobserved factors such as production quality, storytelling, or audience bias that are not captured in the dataset.
+
+------
+
+# 6. Future Improvements
+- Additional features such as release year or studio information were not included, so in the future these additional features and more advanced methods can be used to improve the performance.
