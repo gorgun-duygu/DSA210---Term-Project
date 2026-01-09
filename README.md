@@ -64,8 +64,7 @@ As a computer science student at Sabancı University, I often watch anime online
 # 5. Machine Learning Methods 
 In addition to exploratory data analysis and hypothesis testing, machine learning methods were applied to further analyze how multiple features jointly influence anime ratings. 
 ## 5.1 Features and Target Variable
-The target variable of the models is:
-- **Anime rating**
+The target variable of the models is "Anime rating".
 The features were used as inputs consists of:
 - Number of episodes
 - Anime type (TV, Movie, OVA, etc.)
